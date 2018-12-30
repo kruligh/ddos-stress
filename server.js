@@ -26,11 +26,12 @@ var stats = {
         success: 0
     };
 
-
+const statsSum = {};
 var server = net.createServer(function (node) {
     var d = dnode(function(node){
         this.stats = function (s) {
             console.log("New stats report:",s);
+            statsSum[s.id] = s;
         }
         this.ping = function (s){
             console.log("=> New ping received:" + s);
@@ -95,6 +96,10 @@ app.use('/stats', function (req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ activeNodes: activeNodes.length }));
     next();
+});
+
+app.use('/getStats', function (res, res, next) {
+   res.end(JSON.stringify(statsSum));
 });
 
 /**

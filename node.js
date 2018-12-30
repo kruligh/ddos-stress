@@ -14,7 +14,7 @@
 var dnode = require('dnode'),
     stress = require('./'),
     config = require('./etc/config'),
-    ddos = new stress();
+    ddos = new stress(Math.random() * 100);
 
 /**
  * Connect to the dnode Server
