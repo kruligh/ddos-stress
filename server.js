@@ -98,7 +98,7 @@ app.use('/stats', function (req, res, next) {
     next();
 });
 
-app.use('/getStats', function (res, res, next) {
+app.use('/summaryStats', function (res, res, next) {
    res.end(JSON.stringify(statsSum));
 });
 
