@@ -28,15 +28,15 @@
     "node": ">= 0.10.26"
   },
   "dependencies": {
-    "dnode": "~1.2.1",
-    "superagent": "~0.16.0",
+    "body-parser": "~1.13.2",
     "colors": "~0.6.2",
     "connect": "~3.4.0",
+    "dnode": "~1.2.1",
+    "node-fetch": "^2.3.0",
     "serve-static": "~1.10.0",
-    "body-parser": "~1.13.2"
+    "superagent": "~0.16.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "keywords": [
     "stress",
     "tool",

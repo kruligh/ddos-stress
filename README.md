@@ -2,6 +2,18 @@
 
 > DDoS Stress tool
 
+## Fork Modification
+Instead of using only GET's to url to ddos, I use code using fetch.
+  Run requests by using `copy as fetch` from google developer console, also POST's and others.
+
+  To modify success/failure conditions see `lib/ddos-stess.js::runFetch` function.
+
+  Example command (instead of URL):
+
+  `fetch("http://localhost:8080/operator/session/login", {"credentials":"omit","headers":{"accept":"application/json, text/plain, */*","accept-language":"en-US,en;q=0.9,la;q=0.8,pl;q=0.7","content-type":"application/json"},"referrer":"http://localhost:3002/login/admin","referrerPolicy":"no-referrer-when-downgrade","body":"{\"login\":\"asdf\",\"password\":\"asdf\"}","method":"POST","mode":"cors"})`
+
+  Its dirty code, for tests only.
+
 ## Getting Started
 Install the module with: 
 
